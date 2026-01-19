@@ -1,6 +1,6 @@
 # QSR wiki
 
-This is wiki for minecraft mod Quicksand Rehydrated
+This is wiki for the upcoming minecraft mod Quicksand Rehydrated, to be hosted and viewed on Github pages. [It can be viewed here.]https://rehydrated-labs.github.io/QSR-Wiki/)
 
 ## License info
 
