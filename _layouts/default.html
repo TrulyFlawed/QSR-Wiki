@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QHR wiki</title>
+    <title>{{ page.title | default: site.title }}</title>
     <link rel="stylesheet" href="/assets/css/themes.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
     <script> // Automatically loads saved theme or uses system preference.
@@ -13,14 +13,9 @@
       const savedTheme = localStorage.getItem('theme') || (prefersDark ? 'dark' : 'light');
       document.documentElement.setAttribute('data-theme', savedTheme);
     </script>
-</head>
-<body>
-<head>
-  <meta charset="utf-8">
-  <title>{{ page.title | default: site.title }}</title>
 
-  <!-- optional: allow pages to add head bits -->
-  {{ page.extra_head }}
+    <!-- optional: allow pages to add head bits -->
+    {{ page.extra_head }}
 </head>
 <body>
   {% include header.html %}
@@ -32,9 +27,7 @@
   {% include footer.html %}
 
   <!-- site-wide scripts -->
-    <script src="script.js"></script>
+  <script src="script.js"></script>
   {{ page.extra_scripts }}
-</body>
-</html>
 </body>
 </html>
