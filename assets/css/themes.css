@@ -1,0 +1,84 @@
+/*
+If browser/OS theme default is light or unspecified we default to
+a light theme.
+
+This is rare these days, as most users will have some preference
+set either at a browser or OS level, but good to have.
+
+This is also where all miscellaneous colors like semantic and
+accent colors go too.
+*/
+:root {
+    /* Accent Colors */
+    --accent-primary: #0066cc;
+    --accent-hover: #0052a3;
+    --accent-light: #e6f2ff;
+    
+    /* Semantic Colors */
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    
+    /* Light Theme Colors */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --bg-tertiary: #e9ecef;
+    --text-primary: #212529;
+    --text-secondary: #6c757d;
+    --text-tertiary: #adb5bd;
+    --border-color: #dee2e6;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --shadow-hover: rgba(0, 0, 0, 0.15);
+}
+
+/*
+In the case that the browser/OS preference is set for dark mode, we
+use that. This should also help with situations where we can't set
+a data attribute in the HTML by using JavaScript (since some people
+actually browse the web with JavaScript disabled...)
+*/
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-primary: #1a1a1a;
+        --bg-secondary: #2d2d2d;
+        --bg-tertiary: #404040;
+        --text-primary: #e9ecef;
+        --text-secondary: #adb5bd;
+        --text-tertiary: #6c757d;
+        --border-color: #404040;
+        --shadow: rgba(0, 0, 0, 0.3);
+        --shadow-hover: rgba(0, 0, 0, 0.4);
+        --accent-light: #1a3a52;
+    }
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #2d2d2d;
+    --bg-tertiary: #404040;
+    --text-primary: #e9ecef;
+    --text-secondary: #adb5bd;
+    --text-tertiary: #6c757d;
+    --border-color: #404040;
+    --shadow: rgba(0, 0, 0, 0.3);
+    --shadow-hover: rgba(0, 0, 0, 0.4);
+
+    --accent-light: #1a3a52;
+}
+
+/* Light Theme */
+[data-theme="light"] {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --bg-tertiary: #e9ecef;
+    --text-primary: #212529;
+    --text-secondary: #6c757d;
+    --text-tertiary: #adb5bd;
+    --border-color: #dee2e6;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --shadow-hover: rgba(0, 0, 0, 0.15);
+
+    --accent-light: #e6f2ff;
+}

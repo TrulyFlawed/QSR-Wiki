@@ -84,14 +84,14 @@ class Header extends HTMLElement {
 
 customElements.define('site-header', Header);
 */
-// Theme Toggle
+
+/** 
+ * Theme Toggle
+ * 
+ * The actual theme initialization and setup is in the default page layout.
+ */
 function initThemeToggle() {
     const themeToggle = document.getElementById('themeToggle');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    // Load saved theme or use system preference
-    const savedTheme = localStorage.getItem('theme') || (prefersDark ? 'dark' : 'light');
-    document.documentElement.setAttribute('data-theme', savedTheme);
     
     themeToggle.addEventListener('click', () => {
         const currentTheme = document.documentElement.getAttribute('data-theme');
@@ -99,9 +99,6 @@ function initThemeToggle() {
         
         document.documentElement.setAttribute('data-theme', newTheme);
         localStorage.setItem('theme', newTheme);
-        
-        // Add a smooth transition effect
-        document.body.style.transition = 'background-color 0.3s ease, color 0.3s ease';
     });
 }
 
