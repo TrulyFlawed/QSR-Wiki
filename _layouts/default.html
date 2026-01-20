@@ -14,8 +14,12 @@
       document.documentElement.setAttribute('data-theme', savedTheme);
     </script>
 
-    <!-- optional: allow pages to add head bits -->
-    {{ page.extra_head }}
+    <!-- optional: allow pages to add custom CSS files; could be expanded for JS later if needed -->
+    {% if page.custom_css %}
+      {% for stylesheet in page.custom_css %}
+      <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/{{ stylesheet }}.css">
+      {% endfor %}
+    {% endif %}
 </head>
 <body>
   {% include header.html %}
