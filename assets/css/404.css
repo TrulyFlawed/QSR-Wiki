@@ -1,4 +1,5 @@
 @import url(themes.css);
+@import url(styles.css);
 
 main {
 	display: flex;
@@ -17,8 +18,11 @@ main {
     & p {
         font-size: 3rem;
     }
+    /* We'll probably need to move <a> styling to a more
+    general place in the future, but this works for now. */
     & a {
         color: var(--text-primary);
+        transition: var(--transition);
     }
 }
 
