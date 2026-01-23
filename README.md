@@ -38,5 +38,6 @@ Then, you can access the site via `http://<your-local-ip>:4000`.
 
  - [Theyoungster](https://github.com/Theyoungster) - project owner
  - [Tungstenfur](https://github.com/Tungstenfur) - wiki creator
+ - [TrulyFlawed](https://github.com/TrulyFlawed) - contributor
 
 ![](assets/images/NoAi.png)
