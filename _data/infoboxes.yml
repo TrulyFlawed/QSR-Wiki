@@ -8,3 +8,14 @@ mobs:
     behavior: Behavior
     health: Health points
     speed: Speed
+
+substances:
+  label: Substances
+  image:
+    field: image
+    caption: image_caption
+    alt_text: image_alt_text
+  fields:
+    difficulty: Escape difficulty
+    stability: Surface stability
+    buoyancy: Buoyancy

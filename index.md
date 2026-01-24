@@ -59,8 +59,8 @@ The mod currently has four planned companion mods beyond Quicksand Rehydrated:
 
 ## Substances
 
-- Mire
-- Deep Mud
+- [Mire]({% link pages/mire.md %})
+- [Deep Mud]({% link pages/mud.md %})
 - Bog
 - Peat Bog
 - Marsh
