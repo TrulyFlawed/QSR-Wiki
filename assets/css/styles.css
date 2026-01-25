@@ -322,14 +322,6 @@ nav ul, nav ol, nav li {
     transition: var(--transition);
 }
 
-h1 {
-    font-size: 2.5rem;
-    color: var(--text-primary);
-    margin-bottom: 15px;
-    line-height: 1.2;
-    transition: var(--transition);
-}
-
 .article-meta {
     display: flex;
     gap: 20px;
@@ -345,6 +337,19 @@ h1 {
 .article-content {
     color: var(--text-primary);
     transition: var(--transition);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    display: flow-root;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--text-primary);
+    margin-bottom: 15px;
+    line-height: 1.2;
+    transition: var(--transition);
+    /* display: flow-root; */
 }
 
 h2 {
